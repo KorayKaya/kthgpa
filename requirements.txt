@@ -6,3 +6,6 @@ Jinja2
 peewee
 Werkzeug
 tika
+tempfile
+os
+re
