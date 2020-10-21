@@ -1,1 +1,1 @@
-web: python GPAcalc.py
+web: gunicorn app:app --log-file=-
