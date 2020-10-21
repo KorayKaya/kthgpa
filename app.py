@@ -10,7 +10,7 @@ def index():
         uploaded_file = request.files['file']
         if uploaded_file.filename == '':
             return redirect(url_for('index'), gpa="0")
-        return redirect(url_for('index'), gpa=str(calcGPA(uploaded_file)))
+        return render_template('index.html', gpa=str(calcGPA(uploaded_file)))
     else:
         return render_template('index.html',gpa="0")
 
