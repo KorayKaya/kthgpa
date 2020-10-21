@@ -12,7 +12,7 @@ def index():
     #         return redirect(url_for('index'), gpa="0")
     #     return render_template('index.html', gpa=str(calcGPA(uploaded_file)))
     # else:
-    return render_template('index.html',gpa="0")
+    return render_template('index.html')
 
 # def calcGPA(file):
 #     gradeDictionary = {
