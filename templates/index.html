@@ -88,6 +88,7 @@
           <h1 style="color: black;" style="float: left;">Select Ladok Intyg.pdf</h1>
           <input name="file" id="file" type="file"
             style="float: right;align-self: center;margin-left: 80px;width: 200px;">
+          <img src="https://i.gifer.com/XVo6.gif" id="loader" width="30px" height="30px" style="align-self: center;visibility: hidden;">
         </div>
         <div style="width:100%;color: black;justify-content: center;vertical-align: middle;">
           KTH -> Ladok -> Intyg -> Hämta intyg -> Resultatintyg (Svenska, Ta inte med oavslutade kurser)
@@ -106,6 +107,7 @@
   </div>
   <script>
     document.getElementById("file").onchange = function () {
+      document.getElementById('loader').style.visibility = "visible";
       document.getElementById("form").submit();
     };
     document.getElementById('date_to').valueAsDate = new Date();
