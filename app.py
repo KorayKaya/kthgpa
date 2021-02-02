@@ -53,7 +53,7 @@ def calcGPA(file,date_from,date_to):
     numerator = 0
 
     for rawLine in rawList:
-        if ("(" not in rawLine and "hp" in rawLine):
+        if ("(" not in rawLine and "hp" in rawLine and any(grade in rawLine for grade in gradeDictionary.keys())):
             line = rawLine.replace(u'\xa0', u' ').replace(u'\xad', u'-')
 
             course_date = datetime.datetime.strptime(line.split(" ")[-2], '%Y-%m-%d')
